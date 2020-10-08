@@ -1,0 +1,24 @@
+# Node Code Quality
+
+[![Conventional Commits][conventional-commits-image]][conventional-commits-url]
+[![Dependencies Status][david-dm-image]][david-dm-url]
+[![DevDependencies Status][david-dm-dev-image]][david-dm-dev-url]
+
+[conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+[conventional-commits-url]: https://conventionalcommits.org
+[david-dm-image]: https://david-dm.org/guiigos/node-repository-quality/status.svg?style=flat-square
+[david-dm-url]: https://david-dm.org/guiigos/node-repository-quality
+[david-dm-dev-image]: https://david-dm.org/guiigos/node-repository-quality/dev-status.svg?style=flat-square
+[david-dm-dev-url]: https://david-dm.org/guiigos/node-repository-quality?type=dev
+
+## Overview
+
+Maintaining the organization and code standards is one of the biggest challenges in programming, each developer learned to program in a different way, having different customs and tools. To perform a repository control in order to standardize the way the code is written there are tools and rules, which are configured in this example project according to my personal use.
+
+## Scripts
+
+## License
+
+Project developed for academic purposes.
+
+[![License: MIT](https://img.shields.io/github/license/guiigos/node-repository-quality?color=black&style=flat-square)](./LICENSE)
