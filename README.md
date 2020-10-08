@@ -32,6 +32,35 @@ One of the most used editors today, it allows the automation of the code quality
 - [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: EditorConfig</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://editorconfig.org/)
+
+Tool that standardizes settings between code editors, helping to maintain the standard among developers working with different editors. It basically consists of the standardization of spacing of code identification, coding of files, other standards that may differ among editors.
+
+[`.editorconfig`](/.editorconfig)
+
+```yml
+root = true
+
+[*]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{Makefile,**.mk}]
+indent_style = tab
+```
+
+</details>
 <br>
 
 ## Scripts
