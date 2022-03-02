@@ -311,6 +311,30 @@ release:
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: Nodemon</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://nodemon.io/)
+
+```bash
+$ npm install --save-dev nodemon
+```
+
+Nodemon is a utility that will monitor for any changes in your source and automatically restart your server. Perfect for development.
+
+[`package.json`](./package.json)
+
+```json
+"scripts": {
+  "watch": "nodemon src"
+}
+```
+
+</details>
 <br>
 
 ## Scripts
@@ -327,6 +351,9 @@ $ npm run commit
 
 # Create new release
 $ npm run release
+
+# Run with nodemon
+$ npm run watch
 ```
 
 ## License
