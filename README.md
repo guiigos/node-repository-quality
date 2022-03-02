@@ -216,6 +216,36 @@ The standardization of commits messages is important to maintain a consistent vi
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: Commitizen</strong>
+  </summary>
+  <br>
+
+[**Documentation**](http://commitizen.github.io/cz-cli/)
+
+```bash
+$ npm install --save-dev commitizen
+$ npm install --save-dev cz-conventional-changelog
+```
+
+Tool that makes it easy to write commit messages following the informed pattern. It is presented in the form of a command prompt, requesting the information that composes the message.
+
+[`package.json`](/package.json)
+
+```json
+"scripts": {
+  "commit": "cz"
+},
+"config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
+}
+```
+
+</details>
 <br>
 
 ## Scripts
@@ -226,6 +256,9 @@ $ npm run test:lint
 
 # Perform lint validation by correcting errors
 $ npm run test:lint:fix
+
+# Commit command prompt
+$ npm run commit
 ```
 
 ## License
