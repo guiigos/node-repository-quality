@@ -246,6 +246,71 @@ Tool that makes it easy to write commit messages following the informed pattern.
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: SemanticRelease</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://semantic-release.gitbook.io/semantic-release/)
+
+```bash
+$ npm i --save-dev @semantic-release/{npm,git,github,changelog,commit-analyzer,release-notes-generator}
+```
+
+Fully automated version package generator, adding version according to [semver](https://semver.org/). It also generates the application changelog based on the commits made in the current version. Facilitates the process of creating a new application distribution. There are several configurations that can be used in this tool, the simplest ones are applied to this repository.
+
+[`.releaserc`](./.releaserc)
+
+```json
+{
+  "plugins": [
+    "@semantic-release/github",
+    "@semantic-release/changelog",
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]"
+      }
+    ]
+  ],
+  "branches": [
+    "main"
+  ]
+}
+```
+
+[`Makefile`](./Makefile)
+
+```mk
+include .env
+
+release:
+	GITHUB_TOKEN=${GH_TOKEN} npx semantic-release --no-ci
+```
+
+[`package.json`](./package.json)
+
+```json
+"scripts": {
+  "release": "make release"
+}
+```
+
+</details>
 <br>
 
 ## Scripts
@@ -259,6 +324,9 @@ $ npm run test:lint:fix
 
 # Commit command prompt
 $ npm run commit
+
+# Create new release
+$ npm run release
 ```
 
 ## License
