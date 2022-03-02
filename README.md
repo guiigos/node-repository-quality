@@ -182,6 +182,40 @@ $ npm install --save-dev lint-staged
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: CommitLint</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://commitlint.js.org/)
+
+```bash
+$ npm install --save-dev @commitlint/{config-conventional,cli}
+```
+
+The standardization of commits messages is important to maintain a consistent view of the changes made, avoiding messages with little information and without content.
+
+[`.commitlintrc`](/.commitlintrc)
+
+```json
+{
+  "extends": ["@commitlint/config-conventional"]
+}
+```
+
+[`.huskyrc`](/.huskyrc)
+
+```json
+{
+  "hooks": {
+    "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+  }
+}
+```
+
+</details>
 <br>
 
 ## Scripts

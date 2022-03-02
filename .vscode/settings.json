@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.huskyrc": "json"
+    "*.huskyrc": "json",
+    "*.commitlintrc": "json"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
