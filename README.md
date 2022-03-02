@@ -340,6 +340,11 @@ Nodemon is a utility that will monitor for any changes in your source and automa
 ## Scripts
 
 ```bash
+# Interactive CLI tool
+$ npx ntl
+```
+
+```bash
 # Perform lint validation
 $ npm run test:lint
 
