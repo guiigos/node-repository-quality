@@ -144,6 +144,44 @@ $ npx eslint --init
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: LintStaged</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://github.com/okonet/lint-staged)
+
+Tool that runs commands for code lint only on files that will be added at commit. It makes it easy to test only files that are being worked on. This tool must be installed together with a git hook command tool.
+
+```bash
+$ npm install --save-dev husky
+$ npm install --save-dev lint-staged
+```
+
+[`.huskyrc`](/.huskyrc)
+
+```json
+{
+  "hooks": {
+    "pre-commit": "lint-staged --quiet --allow-empty --no-stash"
+  }
+}
+```
+
+[`package.json`](/package.json)
+
+```json
+"lint-staged": {
+  "src/**/*.js": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
+```
+
+</details>
 <br>
 
 ## Scripts
