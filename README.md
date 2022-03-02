@@ -2,6 +2,7 @@
 
 ![Version](https://img.shields.io/github/package-json/v/guiigos/node-repository-quality)
 ![Last Commit](https://img.shields.io/github/last-commit/guiigos/node-repository-quality)
+![Workflow Lint](https://github.com/guiigos/node-repository-quality/actions/workflows/lint.yml/badge.svg)
 [![Conventional Commits][conventional-commits-image]][conventional-commits-url]
 
 [conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
