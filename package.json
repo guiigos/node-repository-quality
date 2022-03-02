@@ -28,6 +28,16 @@
     "test:lint": "eslint src --ext .js",
     "test:lint:fix": "npm run test:lint -- --fix"
   },
+  "ntl": {
+    "descriptions": {
+      "commit": "Commit command prompt",
+      "start": "Run project",
+      "watch": "Run project with nodemon",
+      "release": "Create new release",
+      "test:lint": "Perform lint validation",
+      "test:lint:fix": "Perform lint validation by correcting errors"
+    }
+  },
   "dependencies": {
     "esm": "3.2.25"
   },
