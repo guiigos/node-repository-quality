@@ -87,12 +87,73 @@ Tool that complements the formatting of codes, being opinionated. It supports se
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: ESLint</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://eslint.org/)
+
+It is a code analysis tool, to identify patterns that do not match the styleguide being used. It is complemented with the previous configurations, allowing the creation of rules related to coding.
+
+```bash
+$ npm install --save-dev eslint-plugin-prettier
+$ npm install --save-dev eslint-config-prettier
+$ npx eslint --init
+```
+
+- **How would you like to use ESLint?** - _`To check syntax, find problems, and enforce code style`_
+- **What type of modules does your project use?** - _`JavaScript modules`_
+- **Which framework does your project use?** - _`None of these`_
+- **Does your project use TypeScript?** - _`No`_
+- **Where does your code run?** - _`Node`_
+- **How would you like to define a style for your project?** - _`Use a popular style guide`_
+- **Which style guide do you want to follow?** - _`Airbnb`_
+- **What format do you want your config file to be in?** - _`JSON`_
+- **Would you like to install them now with npm?** - _`Yes`_
+
+[`.eslintrc`](/.eslintrc)
+
+```json
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}
+```
+
+[`package.json`](/package.json)
+
+```json
+"scripts": {
+  "test:lint": "eslint src --ext .js",
+  "test:lint:fix": "npm run test:lint -- --fix"
+}
+```
+
+</details>
 <br>
 
 ## Scripts
 
 ```bash
+# Perform lint validation
+$ npm run test:lint
 
+# Perform lint validation by correcting errors
+$ npm run test:lint:fix
 ```
 
 ## License
