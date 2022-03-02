@@ -1,0 +1,26 @@
+{
+  "name": "node-repository-quality",
+  "version": "1.0.0",
+  "description": "Repository that contains code quality and standards focused on NodeJs",
+  "keywords": [
+    "quality"
+  ],
+  "author": {
+    "name": "Guilherme Alves",
+    "email": "guiigos.alves@gmail.com",
+    "url": "http://www.guiigos.alves"
+  },
+  "homepage": "https://github.com/guiigos/node-repository-quality#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiigos/node-repository-quality"
+  },
+  "bugs": {
+    "url": "https://github.com/guiigos/node-repository-quality/issues"
+  },
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
