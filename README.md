@@ -60,6 +60,33 @@ indent_style = tab
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: Prettier</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://prettier.io/)
+
+```bash
+$ npm install --save-dev prettier
+```
+
+Tool that complements the formatting of codes, being opinionated. It supports several different languages ​​and can automate code formatting automatically when saving. The main settings we use are the validation of quotation marks, number of characters per line and other settings that it makes available.
+
+[`.prettierrc`](/.prettierrc)
+
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 100
+}
+```
+
+</details>
 <br>
 
 ## Scripts
