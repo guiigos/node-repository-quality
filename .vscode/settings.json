@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.huskyrc": "json",
+    "commit-msg": "shellscript",
+    "pre-commit": "shellscript",
     "*.releaserc": "json",
     "*.commitlintrc": "json"
   },

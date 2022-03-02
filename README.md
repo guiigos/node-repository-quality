@@ -161,14 +161,13 @@ $ npm install --save-dev husky
 $ npm install --save-dev lint-staged
 ```
 
-[`.huskyrc`](/.huskyrc)
+[`pre-commit`](/.husky/pre-commit)
 
-```json
-{
-  "hooks": {
-    "pre-commit": "lint-staged --quiet --allow-empty --no-stash"
-  }
-}
+```sh
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install lint-staged --quiet --allow-empty --no-stash
 ```
 
 [`package.json`](/package.json)
@@ -206,14 +205,13 @@ The standardization of commits messages is important to maintain a consistent vi
 }
 ```
 
-[`.huskyrc`](/.huskyrc)
+[`commit-msg`](/.husky/commit-msg)
 
-```json
-{
-  "hooks": {
-    "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
-  }
-}
+```sh
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit $1
 ```
 
 </details>
@@ -280,17 +278,12 @@ Fully automated version package generator, adding version according to [semver](
     [
       "@semantic-release/git",
       {
-        "assets": [
-          "package.json",
-          "CHANGELOG.md"
-        ],
+        "assets": ["package.json", "CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version} [skip ci]"
       }
     ]
   ],
-  "branches": [
-    "main"
-  ]
+  "branches": ["main"]
 }
 ```
 
