@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "lint-staged --quiet --allow-empty --no-stash",
-    "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
-  }
-}
