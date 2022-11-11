@@ -22,8 +22,9 @@
   "main": "main.js",
   "scripts": {
     "commit": "cz",
-    "start": "node --require esm",
-    "watch": "nodemon --require esm src",
+    "start": "babel-node src",
+    "build": "babel src --out-dir dist",
+    "watch": "nodemon --exec babel-node src",
     "release": "make release",
     "test:lint": "eslint src --ext .js",
     "test:lint:fix": "npm run test:lint -- --fix",
@@ -33,16 +34,18 @@
     "descriptions": {
       "commit": "Commit command prompt",
       "start": "Run project",
+      "build": "Build project",
       "watch": "Run project with nodemon",
       "release": "Create new release",
       "test:lint": "Perform lint validation",
       "test:lint:fix": "Perform lint validation by correcting errors"
     }
   },
-  "dependencies": {
-    "esm": "3.2.25"
-  },
   "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.20.2",
+    "@babel/node": "7.20.2",
+    "@babel/preset-env": "7.20.2",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "@semantic-release/npm": "7.0.6",
