@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/guiigos/node-repository-quality/compare/v1.0.0...v1.1.0) (2022-11-11)
+
+
+### Features
+
+* Replace the esm with babel ([7bd0854](https://github.com/guiigos/node-repository-quality/commit/7bd085404a4109d936e3cbf8ad06652293bf87c3))
+
 # 1.0.0 (2022-03-02)
 
 
