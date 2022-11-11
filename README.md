@@ -329,6 +329,41 @@ Nodemon is a utility that will monitor for any changes in your source and automa
 ```
 
 </details>
+
+<details>
+  <summary>
+    <strong>:heavy_check_mark: Babel</strong>
+  </summary>
+  <br>
+
+[**Documentation**](https://babeljs.io/)
+
+```bash
+$ npm install --save-dev @babel/cli @babel/core @babel/node @babel/preset-env
+```
+
+Babel é utilizado para auxiliar na utilização de código mais recente sem a necessidade me monitorar a compatibilidade com o ambiente que o código irá rodar.
+
+[`package.json`](./package.json)
+
+```json
+"scripts": {
+  "start": "babel-node src",
+  "build": "babel src --out-dir dist",
+  "watch": "nodemon --exec babel-node src"
+}
+```
+
+[`.babelrc`](./.babelrc)
+
+```json
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": []
+}
+```
+
+</details>
 <br>
 
 ## Scripts
@@ -339,6 +374,12 @@ $ npx ntl
 ```
 
 ```bash
+# Run project with babel
+$ npm start
+
+# Perform build project
+$ npm run build
+
 # Perform lint validation
 $ npm run test:lint
 
