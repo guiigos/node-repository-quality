@@ -400,4 +400,4 @@ $ npm run watch
 
 Project developed for academic purposes.
 
-[![License: MIT](https://img.shields.io/github/license/guiigos/node-repository-quality?color=black)](./LICENSE)
+[![License: MIT](https://img.shields.io/github/license/guiigos/node-repository-quality)](./LICENSE)
